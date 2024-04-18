@@ -14,12 +14,20 @@ body {
 h1,
 h2,
 h3,
+h4,
 p {
   margin: 0;
 }
 
 img {
   cursor: pointer;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #999;
+  margin: 0;
 }
 
 .container {
@@ -140,14 +148,14 @@ img {
   border-radius: 100%;
 }
 
-.user-info {
+.header .user-info {
   display: grid;
   grid-template-columns: 66px 1fr;
   align-items: center;
   gap: 16px;
 }
 
-.user-info img {
+.header .user-info img {
   width: 66px;
   height: 66px;
   border-radius: 100%;
@@ -189,6 +197,7 @@ img {
   display: grid;
   grid-template-columns: 3fr 1fr;
   padding: 32px 48px 64px 24px;
+  gap: 24px;
 }
 
 .projects {
@@ -197,7 +206,9 @@ img {
   gap: 16px;
 }
 
-.projects > h3 {
+.projects > h3,
+.announcements > h3,
+.trending > h3 {
   font-weight: 500;
 }
 
@@ -207,33 +218,97 @@ img {
   gap: 24px;
 }
 
-.card {
+.projects .card {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 2px 5px 5px 0px rgba(0, 0, 0, 0.1);
-  padding: 32px 16px;
+  padding: 24px 16px 32px 16px;
   border-left: 8px solid var(--secondary-color);
   display: grid;
   grid-template-rows: 1fr auto;
 }
 
-.card h3 {
+.projects .card h3 {
   font-size: 16px;
 }
 
-.card p {
+.projects .card p {
   font-size: 14px;
   color: #666;
 }
 
-.card img {
+.projects .card img {
   width: 24px;
   height: 24px;
 }
 
-.card .icons {
+.projects .card .icons {
   display: grid;
   grid-template-columns: repeat(3, 24px);
   justify-content: end;
   gap: 24px;
+}
+
+.two-col {
+  display: grid;
+  gap: 32px;
+}
+
+.announcements {
+  display: grid;
+  gap: 16px;
+}
+
+.announcements .card {
+  padding: 32px;
+  background-color: #fff;
+  box-shadow: 2px 5px 5px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: grid;
+  gap: 24px;
+}
+
+.announcements .card h4 {
+  font-size: 14px;
+}
+
+.announcements .card p {
+  font-size: 12px;
+  color: #666;
+}
+
+.trending {
+  display: grid;
+  gap: 16px;
+}
+
+.trending .card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 2px 5px 5px 0px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  display: grid;
+  gap: 24px;
+}
+
+.trending img {
+  width: 44px;
+  height: 44px;
+  border-radius: 100%;
+}
+
+.trending .user-info {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 16px;
+  align-items: center;
+}
+
+.username,
+.info {
+  font-size: 14px;
+}
+
+.info {
+  color: #666;
 }
